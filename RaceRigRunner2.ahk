@@ -1,4 +1,4 @@
-^r::
+^`::
 Run, RaceRig2.ahk
 return
 
