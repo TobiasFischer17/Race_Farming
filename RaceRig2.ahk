@@ -4,16 +4,18 @@ IfWinNotExist, RaceRigRunner2.ahk
 	Run, RaceRigRunner2.ahk
 return
 
-SLEEP_TIME := 400
-
 ^1:: execute(0)
 ^2:: execute(1)
+
+^9::
+Exitapp
 
 ^0::
 Exitapp
 
 settings()
 {
+	SLEEP_TIME := 400
 	sleep 500
 	press("Up", SLEEP_TIME)
 	press("Up", SLEEP_TIME)
@@ -29,6 +31,8 @@ settings()
 
 play(win)
 {
+	SLEEP_TIME := 400
+
 	driveKey := "s"
 	betKey := "Right"
 	if(win) {
@@ -43,8 +47,8 @@ play(win)
 	press("Down", SLEEP_TIME)
 	press(betKey, SLEEP_TIME)
 	press("Enter", SLEEP_TIME)
-	press("Down", SLEEP_TIME)
-	press("Down", SLEEP_TIME)
+	press("Down", SLEEP_TIME*2)
+	press("Down", SLEEP_TIME*2)
 	press("Enter", 15000)
 	SEND {%driveKey% down}
 	sleep 15000
@@ -57,6 +61,7 @@ play(win)
 
 execute(player)
 {
+	SLEEP_TIME := 400
 	iteration := player
 
 	loop
@@ -64,7 +69,7 @@ execute(player)
 		if(player == 0) {
 			settings()
 		} else {
-			sleep SLEEP_TIME*12 + 600
+			sleep SLEEP_TIME*12 + 610
 		}
 		play(iteration == 0)
 
