@@ -56,7 +56,7 @@ play(win)
 	sleep 30000
 	press("Enter", 15000)
 	press("Up", SLEEP_TIME)
-	press("Enter", 15000)
+	press("Enter", 20000)
 }
 
 execute(player)
@@ -69,7 +69,7 @@ execute(player)
 		if(player == 0) {
 			settings()
 		} else {
-			sleep SLEEP_TIME*12 + 610
+			sleep SLEEP_TIME*12 + 620
 		}
 		play(iteration == 0)
 
