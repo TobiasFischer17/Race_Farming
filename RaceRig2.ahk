@@ -47,8 +47,8 @@ play(win)
 	press("Down", SLEEP_TIME)
 	press(betKey, SLEEP_TIME)
 	press("Enter", SLEEP_TIME)
-	press("Down", SLEEP_TIME)
-	press("Down", SLEEP_TIME)
+	press("Down", SLEEP_TIME*2)
+	press("Down", SLEEP_TIME*2)
 	press("Enter", 15000)
 	SEND {%driveKey% down}
 	sleep 15000
