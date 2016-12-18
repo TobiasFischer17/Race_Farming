@@ -9,6 +9,9 @@ SLEEP_TIME := 400
 ^1:: execute(0)
 ^2:: execute(1)
 
+^9::
+Exitapp
+
 ^0::
 Exitapp
 

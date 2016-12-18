@@ -2,5 +2,5 @@
 Run, RaceRig2.ahk
 return
 
-^9::
+^0::
 Exitapp
