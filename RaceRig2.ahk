@@ -13,6 +13,8 @@ Exitapp
 ^0::
 Exitapp
 
+
+
 settings()
 {
 	SLEEP_TIME := 400
@@ -64,8 +66,10 @@ play(win)
 
 execute(player)
 {
+	EXECUTE_TIME = (60 + 57) * 1000
 	SLEEP_TIME := 400
 	iteration := player
+	DllCall("QueryPerformanceCounter", "Int64*", startTime)
 
 	loop
 	{
@@ -77,6 +81,15 @@ execute(player)
 		play(iteration == 0)
 
 		iteration := mod(iteration + 1, 2)
+		
+		loop
+		{
+			DllCall("QueryPerformanceCounter", "Int64*", currTime)
+			if(currTime - startTime >= EXECUTE_TIME) {
+				Break
+			}
+			sleep 1
+		}
 	}
 }
 
