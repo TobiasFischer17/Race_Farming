@@ -49,14 +49,17 @@ play(win)
 	press("Enter", SLEEP_TIME)
 	press("Down", SLEEP_TIME*2)
 	press("Down", SLEEP_TIME*2)
-	press("Enter", 15000)
+	press("Enter", SLEEP_TIME)
+	press("Down", SLEEP_TIME)
+	press("Enter", 14000)
 	SEND {%driveKey% down}
-	sleep 15000
+	sleep 8000
 	SEND {%driveKey% up}
+	sleep 7000
 	sleep 30000
-	press("Enter", 15000)
+	press("Enter", 5000)
 	press("Up", SLEEP_TIME)
-	press("Enter", 20000)
+	press("Enter", 25000)
 }
 
 execute(player)
@@ -69,7 +72,7 @@ execute(player)
 		if(player == 0) {
 			settings()
 		} else {
-			sleep SLEEP_TIME*12 + 620
+			sleep SLEEP_TIME*12 + 725
 		}
 		play(iteration == 0)
 
