@@ -72,7 +72,7 @@ execute(player)
 		if(player == 0) {
 			settings()
 		} else {
-			sleep SLEEP_TIME*12 + 725
+			sleep SLEEP_TIME*12 + 715
 		}
 		play(iteration == 0)
 
